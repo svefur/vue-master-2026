@@ -3,6 +3,6 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 </script>
 <template>
-	<h1>Project {{ route.params?.id }}</h1>
+	<h1>Project {{ (route.params as { id: string })?.id }}</h1>
 </template>
 <style scope></style>

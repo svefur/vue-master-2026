@@ -1,6 +1,5 @@
 <script setup lang="ts"></script>
 <template>
-	<h1>Home page</h1>
-	<RouterLink to="/projects">Go to Projects</RouterLink>
+	<h1>404 Not found</h1>
 </template>
 <style scope></style>
