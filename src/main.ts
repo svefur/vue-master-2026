@@ -1,3 +1,6 @@
+import '@/style.css'
+import 'iconify-icon'
+
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'

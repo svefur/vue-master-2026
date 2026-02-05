@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
 import { supabase } from '@/lib/supabaseClient'
 import { ref } from 'vue'
 import type { Tables } from '../../../database/types'
@@ -16,6 +17,11 @@ const projects = ref<Tables<'projects'>[] | null>(null)
 <template>
 	<h1>Project page</h1>
 	<RouterLink to="/">Go to Home</RouterLink>
+
+	<div>
+		<Button>Click me</Button>
+	</div>
+
 	<ul>
 		<li v-for="project in projects" :key="project.id">
 			<RouterLink :to="{ name: '/projects/[id]', params: { id: project.slug } }">
