@@ -12,9 +12,9 @@ watch(
 )
 
 const getProject = async () => {
-	const { data, error } = await projectQuery(route.params.slug)
+	const { data, error, status } = await projectQuery(route.params.slug)
 
-	if (error) console.error('Error fetching projects:', error)
+	if (error) useErrorStore().setError({ error: error, customCode: status })
 
 	project.value = data
 }
@@ -97,6 +97,7 @@ await getProject()
 </template>
 
 <style scoped lang="postcss">
+@import '../../style.css';
 th {
 	@apply w-25;
 }
