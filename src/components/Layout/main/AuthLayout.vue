@@ -3,7 +3,7 @@ const { pageData } = storeToRefs(usePageStore())
 </script>
 
 <template>
-	<Sidebar />
+	<SidebarTop />
 	<div class="flex flex-col lg:ml-52 ml-16 transition-[margin]">
 		<TopNavbar />
 

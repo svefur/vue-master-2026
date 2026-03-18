@@ -5,6 +5,9 @@ onErrorCaptured((error) => {
 	errorStore.setError({ error })
 	return false
 })
+onMounted(async () => {
+	useAuthStore().trackAuthChanges()
+})
 </script>
 
 <template>
